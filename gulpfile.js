@@ -53,7 +53,7 @@ function hasTravisTag() {
 /**
  * Function: isTravis
  *
- * Determines whether the current Gulp process is running on Travis CI.
+ * Determines whether the current Gulp process is running on Github Actions CI.
  *
  * See: <Default Environment Variables: https://docs.travis-ci.com/user/environment-variables/#Default-Environment-Variables>.
  *
