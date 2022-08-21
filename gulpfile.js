@@ -50,7 +50,7 @@ function hasTravisTag() {
 }
 
 /**
- * Function: isTravis
+ * Function: isCi
  *
  * Determines whether the current Gulp process is running on Github Actions CI.
  *
@@ -59,8 +59,8 @@ function hasTravisTag() {
  * Returns:
  *   (boolean)
  */
-function isTravis() {
-  return ( typeof process.env.TRAVIS !== 'undefined' );
+function isCi() {
+  return ( typeof process.env.CI !== 'undefined' );
 }
 
 /**
@@ -379,7 +379,7 @@ gulp.task( 'images', () => {
  * ---
  */
 gulp.task( 'release', ( callback ) => {
-  const travis = isTravis();
+  const travis = isCi();
 
   if ( travis ) {
     taskHeader(
@@ -469,7 +469,7 @@ gulp.task( 'releaseCopy', () => {
  * ---
  */
 gulp.task( 'default', ( callback ) => {
-  const travis = isTravis();
+  const travis = isCi();
 
   taskHeader(
     '0',
