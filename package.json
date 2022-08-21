@@ -62,5 +62,8 @@
   },
   "license": "ISC",
   "homepage": "https://github.com/dotherightthing/gulp-wpdtrt-plugin-bump",
-  "srcDir": "/Volumes/DanBackup/Websites/gulp-wpdtrt-plugin-bump"
+  "srcDir": "/Volumes/DanBackup/Websites/gulp-wpdtrt-plugin-bump",
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  }
 }
