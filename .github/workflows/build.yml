@@ -36,9 +36,11 @@ jobs:
           ~/.cache
         key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
 
-    - name: Install dependencies
+    # npm ci runs a clean install from package-lock.json
+    # ensure that any changes to this file are committed and pushed
+    # (incl artefacts from npm install --legacy-peer-deps )
+    - name: Install Node dependencies
       run: |
-        npm install --legacy-peer-deps
         npm install --global gulp-cli
         npm ci
 
