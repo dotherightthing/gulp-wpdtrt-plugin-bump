@@ -20,7 +20,6 @@ const runSequence = require( 'run-sequence' );
 const shell = require( 'gulp-shell' );
 const svgo = require( 'gulp-svgo' );
 const unzip = require( 'gulp-unzip' );
-const zip = require( 'gulp-zip' );
 
 const distDir = process.cwd().split( '/' ).pop();
 
@@ -392,7 +391,6 @@ gulp.task( 'release', ( callback ) => {
     runSequence(
       'releaseNpmDist',
       'releaseCopy',
-      'releaseZip',
       callback
     );
   } else {
@@ -455,31 +453,6 @@ gulp.task( 'releaseCopy', () => {
   return gulp.src( releaseFiles, { base: '.' } )
     .pipe( print() ) // eslint-disable-line no-restricted-globals
     .pipe( gulp.dest( distDir ) );
-} );
-
-/**
- * Method: releaseZip
- *
- * Generate release.zip for deployment by Travis/Github.
- *
- * Returns:
- *   Stream or promise for run-sequence.
- */
-gulp.task( 'releaseZip', () => {
-  taskHeader(
-    '6c',
-    'Release',
-    'Generate',
-    'ZIP file'
-  );
-
-  // return stream or promise for run-sequence
-  // https://stackoverflow.com/a/32188928/6850747
-  return gulp.src( [
-    `./${distDir}/**/*`
-  ], { base: '.' } )
-    .pipe( zip( 'release.zip' ) )
-    .pipe( gulp.dest( './' ) );
 } );
 
 /**
