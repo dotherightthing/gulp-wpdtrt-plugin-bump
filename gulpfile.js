@@ -36,7 +36,7 @@ const jsFilesToLint = [
 const svgFiles = 'readme-styles/icons/*.svg';
 
 /**
- * Function: hasTravisTag
+ * Function: hasGithubTag
  *
  * Determines whether the commit is tagged
  *
@@ -45,8 +45,8 @@ const svgFiles = 'readme-styles/icons/*.svg';
  * Returns:
  *   (boolean)
  */
-function hasTravisTag() {
-  return ( process.env.TRAVIS_TAG !== '' );
+function hasGithubTag() {
+  return ( process.env.GITHUB_REF !== '' );
 }
 
 /**
@@ -326,7 +326,7 @@ gulp.task( 'docs', ( callback ) => {
   const naturalDocsPath = 'Natural Docs/NaturalDocs.exe';
 
   // CI does not install mono unless the release is tagged
-  if ( hasTravisTag() ) {
+  if ( hasGithubTag() ) {
     // note: src files are not used,
     // this structure is only used
     // to include the preceding log()
