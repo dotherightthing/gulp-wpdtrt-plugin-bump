@@ -21,7 +21,7 @@ const shell = require( 'gulp-shell' );
 const svgo = require( 'gulp-svgo' );
 const unzip = require( 'gulp-unzip' );
 
-const distDir = process.cwd().split( '/' ).pop();
+const distDir = 'release';
 
 // Input files.
 const jsFilesToLint = [
