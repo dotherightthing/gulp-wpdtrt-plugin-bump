@@ -9,9 +9,9 @@ Format: 2.0.2
 # ------------------------------------------------------------------------
 
 Title: Documentation
-Subtitle: DTRT WordPress Plugin Bump (0.2.11)
+Subtitle: DTRT WordPress Plugin Bump (0.2.12)
 
-Copyright: Copyright © 2020 Dan Smith
+Copyright: Copyright © 2022 Dan Smith
 
 Timestamp: Last updated day month, year
 #    m     - Single digit month, when possible.  January is "1".
