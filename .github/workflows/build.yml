@@ -42,7 +42,7 @@ jobs:
     - name: Install Node dependencies
       run: |
         npm install --global gulp-cli
-        npm ci
+        npm ci --legacy-peer-deps
 
     - name: Run build
       run: |
