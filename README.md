@@ -45,7 +45,7 @@ See `wpdtrt-plugin-boilerplate`:
    1. `npm run docs` - Generate documentation to `docs/`
    1. `npm run images` - Optimise images
    1. `npm run lint` - Lint code
-   1. `npm run release` - Package release (Travis only)
+   1. `npm run release` - Package release (Github Actions)
    1. `npm run tests` - Test code
 
 ### Files
