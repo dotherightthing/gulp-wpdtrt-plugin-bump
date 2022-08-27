@@ -49,6 +49,7 @@ See `wpdtrt-plugin-boilerplate`:
    1. `npm run lint` - Lint code
    1. `npm run release` - Package release (Github Actions)
    1. `npm run tests` - Test code
+   1. `npm run changelog` - Update `CHANGELOG.md` with all commit messages since the last tag
 
 ### Files
 
@@ -82,12 +83,11 @@ The unit tests confirm that:
 
 ### Release
 
-1. Lint and Test the codebase (see above)
-2. Update `CHANGELOG.md` with all commit messages since the last tag: `npm run changelog`
-3. Update version in: `./package.json` and `./config/naturaldocs/Project.txt`
-4. Commit: `CHANGELOG.md`, `package.json` and `Project.txt`
-5. Tag commit
-6. Push to Github (Github Actions CI will run)
+1. `npm run build`
+2. Update version in: `./package.json` and `./config/naturaldocs/Project.txt`
+3. Commit: `CHANGELOG.md`, `package.json` and `Project.txt`
+4. Tag commit
+5. Push to Github (Github Actions CI will run)
 
 ### Handy reference links
 

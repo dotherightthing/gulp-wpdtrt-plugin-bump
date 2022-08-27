@@ -51,7 +51,7 @@
   "scripts": {
     "preinstall": "chmod a+x scripts/**/*.sh",
     "changelog": "./scripts/changelog/changelog.sh",
-    "build": "gulp",
+    "build": "gulp && npm run changelog",
     "dependencies": "gulp dependencies",
     "docs": "gulp docs",
     "images": "gulp images",
