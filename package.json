@@ -48,6 +48,8 @@
     "mocha": "^5.1.1"
   },
   "scripts": {
+    "preinstall": "chmod a+x scripts/**/*.sh",
+    "changelog": "./scripts/changelog/changelog.sh",
     "build": "gulp",
     "dependencies": "gulp dependencies",
     "docs": "gulp docs",
