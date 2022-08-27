@@ -10,6 +10,20 @@ A Gulp utility to update a fixed selection of files in either the [DTRT WordPres
 npm install https://github.com/dotherightthing/gulp-wpdtrt-plugin-bump --save-dev
 ```
 
+## Update
+
+[Release 0.2.12](https://github.com/dotherightthing/gulp-wpdtrt-plugin-bump/releases/tag/0.2.12) patches an incompatibility between `gulp:^3.9.1` and `node:>11.15.0` (*ReferenceError: primordials is not defined* - see [#30](https://github.com/dotherightthing/gulp-wpdtrt-plugin-bump/issues/30)).
+
+As `dotherightthing/gulp-wpdtrt-plugin-bump` is loaded by `dotherightthing/wpdtrt-npm-scripts`, remove and re-add the latter to perform the upgrade without issue:
+
+```sh
+# install latest tagged version
+npm remove wpdtrt-npm-scripts && npm install dotherightthing/wpdtrt-npm-scripts#semver:*
+
+# or: install latest dev version
+npm remove wpdtrt-npm-scripts && npm install dotherightthing/wpdtrt-npm-scripts
+```
+
 ## Usage
 
 See `wpdtrt-plugin-boilerplate`:
