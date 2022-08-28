@@ -20,7 +20,7 @@
     "url": "https://github.com/dotherightthing/gulp-wpdtrt-plugin-bump/issues"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-color": "^0.0.2",
     "gulp-download": "^0.0.1",
     "gulp-eslint": "^6.0.0",
