@@ -4,6 +4,11 @@
 
 A Gulp utility to update a fixed selection of files in either the [DTRT WordPress Plugin Boilerplate](https://github.com/dotherightthing/wpdtrt-plugin-boilerplate/), or a child generated with the [DTRT WordPress Plugin Boilerplate Generator](https://github.com/dotherightthing/generator-wp-plugin-boilerplate), using the version information in `package.json`.
 
+## Dependencies
+
+1. Mono (Natural Docs' framework) - <https://www.mono-project.com/download/stable/> (deprecated)
+2. Natural Docs - <https://www.naturaldocs.org/download/> and save to `./bin/Natural Docs` (deprecated)
+
 ## Installation
 
 ```sh
@@ -43,13 +48,12 @@ See `wpdtrt-plugin-boilerplate`:
 
 1. `npm install` - Install NPM dependencies
 1. `npm run build` - Run the following scripts:
-   1. `npm run dependencies` - Install documentation dependencies
+   1. `npm run changelog` - Update `CHANGELOG.md` with all commit messages since the last tag
    1. `npm run docs` - Generate documentation to `docs/`
    1. `npm run images` - Optimise images
    1. `npm run lint` - Lint code
    1. `npm run release` - Package release (Github Actions)
-   1. `npm run tests` - Test code
-   1. `npm run changelog` - Update `CHANGELOG.md` with all commit messages since the last tag
+   1. `npm run test` - Test code
 
 ### Files
 
