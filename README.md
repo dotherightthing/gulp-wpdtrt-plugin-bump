@@ -4,6 +4,12 @@
 
 A Gulp utility to update a fixed selection of files in either the [DTRT WordPress Plugin Boilerplate](https://github.com/dotherightthing/wpdtrt-plugin-boilerplate/), or a child generated with the [DTRT WordPress Plugin Boilerplate Generator](https://github.com/dotherightthing/generator-wp-plugin-boilerplate), using the version information in `package.json`.
 
+---
+
+> **This project has been merged into [wpdtrt-npm-scripts](https://github.com/dotherightthing/wpdtrt-npm-scripts/) and is no longer maintained.**
+
+---
+
 ## Dependencies
 
 1. Mono (Natural Docs' framework) - <https://www.mono-project.com/download/stable/> (deprecated)
